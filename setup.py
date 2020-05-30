@@ -13,7 +13,9 @@ setup(
         'django==1.11.28',
         'nose==1.3.7',
         'django-nose==1.4.4',
-        'nosedjango==1.0.13'
+        'nosedjango==1.0.13',
+        'djangorestframework==3.9',
+        'django-cors-headers==2.1.0'
     ],
     test_suite='tests',
     tests_require=['nose'],

@@ -27,8 +27,12 @@ DJANGO_APPS = (
 
     # Admin
     'django.contrib.admin',
+
 )
-THIRD_PARTY_APPS = ()
+THIRD_PARTY_APPS = (
+    'rest_framework',
+    'corsheaders'
+)
 
 LOCAL_APPS = (
     'moviesapp.movies.apps.MoviesConfig',
@@ -44,6 +48,7 @@ MIDDLEWARE = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware'
 )
 
 MIGRATION_MODULES = {
@@ -145,3 +150,9 @@ AUTHENTICATION_BACKENDS = (
 )
 
 ADMIN_URL = r'^admin/'
+
+CORS_ORIGIN_ALLOW_ALL = False
+
+CORS_ORIGIN_WHITELIST = (
+       'localhost:3000',
+)
