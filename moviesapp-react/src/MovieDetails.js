@@ -38,9 +38,11 @@ class  MovieDetails  extends  Component {
 
     render() {
         return (
-            <table>
+            <div>
+                <a href={'/'}>Movies List</a>
+                <table>
                 <tbody>
-                        <tr>
+                    <tr>
                         <td>Title</td>
                         <td>{this.state.title}</td>
                     </tr>
@@ -69,7 +71,9 @@ class  MovieDetails  extends  Component {
                         <td>{this.state.plot}</td>
                     </tr>
                 </tbody>
-            </table>
+                </table>
+                <a href={'/'}>Movies List</a>
+            </div>
         );
     }
 

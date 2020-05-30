@@ -13,9 +13,9 @@ render() {
     return (
     <BrowserRouter>
         <Route  path="/"  exact  component={MoviesList}  />
-        <Route  path="/movies/:movie_id"  component={MovieDetails}  />
-        <Route  path="/movies/create"  component={MovieCreate}  />
-        <Route  path="/movies/update/:movie_id"  component={MovieUpdate}  />
+        <Route  path="/movies/create/new"  exact component={MovieCreate}  />
+        <Route  path="/movies/update/:movie_id" exact component={MovieUpdate}  />
+        <Route  path="/movies/:movie_id" exact component={MovieDetails}  />
     </BrowserRouter>
     );
 }

@@ -33,17 +33,21 @@ class  MoviesList  extends  Component {
     render()
     {
         return (
-            <table  className="table">
-            <tbody>
-            {this.state.movies.map( movie =>
-                <tr  key={movie.id}>
-                    <td>{movie.id}  </td>
-                    <td><a  href={"/movies/" + movie.id}>{movie.title}</a></td>
-                    <td><button onClick={(e)=>  this.handleDelete(e,movie.id) }>Delete</button></td>
-                </tr>
-            )}
-            </tbody>
-            </table>
+            <div>
+                <table  className="table">
+                <tbody>
+                    {this.state.movies.map( movie =>
+                        <tr  key={movie.id}>
+                            <td>{movie.id}  </td>
+                            <td><a  href={"/movies/" + movie.id}>{movie.title}</a></td>
+                            <td><button onClick={(e)=>  this.handleDelete(e,movie.id) }>Delete</button></td>
+                            <td><a  href={"/movies/update/" + movie.id}>Update</a></td>
+                        </tr>
+                    )}
+                </tbody>
+                </table>
+                <a href={'/movies/create/new'}>Add new movie</a>
+            </div>
         );
     }
 }

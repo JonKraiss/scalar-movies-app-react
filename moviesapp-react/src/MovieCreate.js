@@ -75,32 +75,36 @@ class  MovieCreate  extends  Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <div className="form-group">
-                    <label>Title:</label>
-                    <input type="text" value={this.state.title} onChange={this.handleTitle} />
+            <div>
+                <a href={'/'}>Movies List</a>
+                    <form onSubmit={this.handleSubmit}>
+                        <div className="form-group">
+                            <label>Title:</label>
+                            <input type="text" value={this.state.title} onChange={this.handleTitle} />
 
-                    <label>Year:</label>
-                    <input type="text" value={this.state.year} onChange={this.handleYear} />
+                            <label>Year:</label>
+                            <input type="text" value={this.state.year} onChange={this.handleYear} />
 
-                    <label>Rated:</label>
-                    <input type="text" value={this.state.rated} onChange={this.handleRated} />
+                            <label>Rated:</label>
+                            <input type="text" value={this.state.rated} onChange={this.handleRated} />
 
-                    <label>Released:</label>
-                    <input type="text" value={this.state.released_on} onChange={this.handleReleasedOn} />
+                            <label>Released:</label>
+                            <input type="text" value={this.state.released_on} onChange={this.handleReleasedOn} />
 
-                    <label>Genre:</label>
-                    <input type="text" value={this.state.genre} onChange={this.handleGenre} />
+                            <label>Genre:</label>
+                            <input type="text" value={this.state.genre} onChange={this.handleGenre} />
 
-                    <label>Director:</label>
-                    <input type="text" value={this.state.director} onChange={this.handleDirector} />
+                            <label>Director:</label>
+                            <input type="text" value={this.state.director} onChange={this.handleDirector} />
 
-                    <label>Plot:</label>
-                    <textarea value={this.state.plot} onChange={this.handlePlot} />
+                            <label>Plot:</label>
+                            <textarea value={this.state.plot} onChange={this.handlePlot} />
 
-                    <input className="btn btn-primary" type="submit" value="Create" />
-                </div>
-          </form>
+                            <input className="btn btn-primary" type="submit" value="Create" />
+                        </div>
+                    </form>
+                <a href={'/'}>Movies List</a>
+            </div>
         );
     }
 

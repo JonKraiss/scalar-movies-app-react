@@ -96,7 +96,9 @@ class  MovieUpdate  extends  Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
+            <div>
+                <a href={'/'}>Movies List</a>
+                <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
                     <label>Title:</label>
                     <input type="text" value={this.state.title} onChange={this.handleTitle} />
@@ -119,9 +121,11 @@ class  MovieUpdate  extends  Component {
                     <label>Plot:</label>
                     <textarea value={this.state.plot} onChange={this.handlePlot} />
 
-                    <input className="btn btn-primary" type="submit" value="Create" />
+                    <input className="btn btn-primary" type="submit" value="Update" />
                 </div>
-          </form>
+                </form>
+                <a href={'/'}>Movies List</a>
+            </div>
         );
     }
 
