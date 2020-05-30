@@ -45,6 +45,6 @@ class  MoviesList  extends  Component {
             </tbody>
             </table>
         );
-  }
+    }
 }
 export  default  MoviesList;

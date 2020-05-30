@@ -39,20 +39,34 @@ class  MovieDetails  extends  Component {
     render() {
         return (
             <table>
-                <td>Title</td>
-                <td>{this.state.title}</td>
-                <td>Year</td>
-                <td>{this.state.year}</td>
-                <td>Rated</td>
-                <td>{this.state.rated}</td>
-                <td>Released</td>
-                <td>{this.state.released_on}</td>
-                <td>Genre</td>
-                <td>{this.state.genre}</td>
-                <td>Director</td>
-                <td>{this.state.director}</td>
-                <td>Plot</td>
-                <td>{this.state.plot}</td>
+                <tr>
+                    <td>Title</td>
+                    <td>{this.state.title}</td>
+                </tr>
+                <tr>
+                    <td>Year</td>
+                    <td>{this.state.year}</td>
+                </tr>
+                <tr>
+                    <td>Rated</td>
+                    <td>{this.state.rated}</td>
+                </tr>
+                <tr>
+                    <td>Released</td>
+                    <td>{this.state.released_on}</td>
+                </tr>
+                <tr>
+                    <td>Genre</td>
+                    <td>{this.state.genre}</td>
+                </tr>
+                <tr>
+                    <td>Director</td>
+                    <td>{this.state.director}</td>
+                </tr>
+                <tr>
+                    <td>Plot</td>
+                    <td>{this.state.plot}</td>
+                </tr>
             </table>
         );
     }
