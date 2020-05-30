@@ -15,7 +15,6 @@ class  MoviesList  extends  Component {
     componentDidMount() {
     var  self  =  this;
     moviesService.getMoviesList().then(function (result) {
-        console.log(result);
         self.setState({ movies:  result.data})
     });
 }
@@ -24,29 +23,11 @@ class  MoviesList  extends  Component {
     {
         return (
             <table  className="table">
-                <thead  key="thead">
-            <tr>
-                <th>#</th>
-                <th>Title</th>
-                <th>Year</th>
-                <th>Rated</th>
-                <th>Released</th>
-                <th>Genre</th>
-                <th>Director</th>
-                <th>Plot</th>
-            </tr>
-            </thead>
             <tbody>
             {this.state.movies.map( movie =>
                 <tr  key={movie.id}>
                     <td>{movie.id}  </td>
-                    <td>{movie.title}</td>
-                    <td>{movie.year}</td>
-                    <td>{movie.rated}</td>
-                    <td>{movie.released_on}</td>
-                    <td>{movie.genre}</td>
-                    <td>{movie.director}</td>
-                    <td>{movie.plot}</td>
+                    <td><a  href={"/movies/" + movie.id}>{movie.title}</a></td>
                 </tr>
             )}
             </tbody>

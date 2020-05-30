@@ -1,14 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import MoviesList from "./MoviesList";
+import  React, { Component } from  'react';
+import { BrowserRouter } from  'react-router-dom'
+import { Route, Link } from  'react-router-dom'
+import  MoviesList  from  './MoviesList'
+import  MovieDetails  from  './MovieDetails'
+import  './App.css';
 
-function App() {
-  return (
-    <div className="App">
-        <MoviesList></MoviesList>
-    </div>
-  );
+class  App  extends  Component {
+
+render() {
+    return (
+    <BrowserRouter>
+        <Route  path="/"  exact  component={MoviesList}  />
+        <Route  path="/movies/:movie_id"  component={MovieDetails}  />
+    </BrowserRouter>
+    );
 }
-
-export default App;
+}
+export  default  App;
