@@ -34,7 +34,7 @@ class  MovieDetails  extends  Component {
             })
           })
         }
-      }
+    }
 
     render() {
         return (
