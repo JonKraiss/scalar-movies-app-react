@@ -2,9 +2,6 @@ import axios from 'axios';
 const API_URL = 'http://localhost:8000/movies/api';
 
 export default class MoviesService{
-
-    constructor(){}
-
     getMoviesList() {
         const url = `${API_URL}`;
         return axios.get(url).then(response => response.data);
@@ -18,7 +15,7 @@ export default class MoviesService{
         return axios.delete(url);
     }
     createMovie(movie){
-        const url = `${API_URL}`;
+        const url = `${API_URL}/create`;
         return axios.post(url,movie);
     }
     updateMovie(movie){

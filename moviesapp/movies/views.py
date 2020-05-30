@@ -72,13 +72,16 @@ class MovieDeleteView(DeleteView):
         return reverse('movies:index')
 
 
-@api_view(['GET', 'POST'])
+@api_view(['GET'])
 def api_movies_list(request):
     if request.method == 'GET':
         serializer = MovieSerializer(Movie.objects.all(), context={'request': request}, many=True)
         return Response({'data': serializer.data})
 
-    elif request.method == 'POST':
+
+@api_view(['POST'])
+def api_movie_create(request):
+    if request.method == 'POST':
         serializer = MovieSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
