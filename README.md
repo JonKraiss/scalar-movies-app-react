@@ -73,3 +73,4 @@ To run the project, use:
 ```
 python manage.py runserver
 ```
+# scalar-movies-app-react
