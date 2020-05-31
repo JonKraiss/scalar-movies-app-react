@@ -42,6 +42,6 @@ class Movie(models.Model):
 
 
 class Rating(models.Model):
-    movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
+    movie = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name='ratings')
     review = models.CharField(max_length=200)
     score = models.IntegerField(default=0)

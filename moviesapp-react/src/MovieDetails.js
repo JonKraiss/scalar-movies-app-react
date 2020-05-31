@@ -1,5 +1,6 @@
 import  React, { Component } from  'react';
 import  MoviesService  from  './MoviesService';
+import MovieRatings from "./MovieRatings";
 
 const  moviesService  =  new  MoviesService();
 
@@ -8,13 +9,15 @@ class  MovieDetails  extends  Component {
     constructor(props) {
         super(props);
         this.state = {
+            id: '',
             title: '',
             year: '',
             rated: '',
             released_on: '',
             genre: '',
             director: '',
-            plot: ''
+            plot: '',
+            ratings: []
         }
     }
 
@@ -24,13 +27,15 @@ class  MovieDetails  extends  Component {
         {
             moviesService.getMovie(params.movie_id).then((movie)=>{
                 this.setState({
+                    id: params.movie_id,
                     title: movie.title,
                     year: movie.year,
                     rated: movie.rated,
                     released_on: movie.released_on,
                     genre: movie.genre,
                     director: movie.director,
-                    plot: movie.plot
+                    plot: movie.plot,
+                    ratings: movie.ratings
             })
           })
         }
@@ -72,7 +77,7 @@ class  MovieDetails  extends  Component {
                     </tr>
                 </tbody>
                 </table>
-                <a href={'/'}>Movies List</a>
+                <MovieRatings movie_id={this.state.id} ratings={this.state.ratings} ></MovieRatings>
             </div>
         );
     }

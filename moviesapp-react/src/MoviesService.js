@@ -22,4 +22,8 @@ export default class MoviesService{
         const url = `${API_URL}/${movie.id}`;
         return axios.put(url,movie);
     }
+    createRating(movie_id, score, review){
+        const url = `${API_URL}/ratings/${movie_id}`;
+        return axios.post(url,{movie_id: movie_id, score:score, review:review});
+    }
 }

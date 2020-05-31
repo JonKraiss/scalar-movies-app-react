@@ -110,3 +110,9 @@ def api_movie(request, movie_id):
     elif request.method == 'DELETE':
         movie.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+@api_view(['POST'])
+def api_ratings(request, movie_id):
+    if request.method == 'POST':
+        pass
